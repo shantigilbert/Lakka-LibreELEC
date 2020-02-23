@@ -29,10 +29,13 @@
     KERNEL_MAKE_EXTRACMD+=" rockchip/rk3326-odroidgo2-linux.dtb"
 
   # Display server required to rotate LCD display
-    DISPLAYSERVER="weston"
+    DISPLAYSERVER="no"
 
   # Mali GPU family
     MALI_FAMILY="g31"
+  
+  # OpenGL-ES implementation to use (no / bcm2835-driver / gpu-viv-bin-mx6q)
+    OPENGLES="mali-bifrost"
 
   # kernel serial console
     EXTRA_CMDLINE="console=ttyFIQ0 console=tty0 net.iframes=0 fbcon=rotate:3 ssh"
